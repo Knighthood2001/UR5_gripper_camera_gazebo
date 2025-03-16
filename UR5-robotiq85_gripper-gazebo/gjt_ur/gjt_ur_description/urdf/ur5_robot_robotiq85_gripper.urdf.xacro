@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5" >
-
+<!-- 没有关节限制 -->
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
 
   <!-- common stuff -->
   <xacro:include filename="$(find gjt_ur_description)/urdf/common.gazebo.xacro" />
 
   <!-- ur5_robotiq85_gripper -->
+  <!-- 一个是ur5机械臂，一个是夹爪，这个家爪就是robotiq_85_gripper包 -->
   <xacro:include filename="$(find gjt_ur_description)/urdf/ur5.urdf.xacro" />
   <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
 

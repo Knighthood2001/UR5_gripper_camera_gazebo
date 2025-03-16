@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- 这个文件没有用到 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <gazebo>
@@ -37,7 +38,7 @@
     <material>Gazebo/Green</material>
   </gazebo>
 
- <!-- camera -->
+ <!-- 相机 -->
   <gazebo reference="camera_link">
     <sensor type="camera" name="camera1">
       <update_rate>30.0</update_rate>

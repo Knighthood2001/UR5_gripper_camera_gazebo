@@ -2,7 +2,7 @@
 
 
 <robot name="robotiq_85_gripper" xmlns:xacro="http://ros.org/wiki/xacro">
-    
+    <!-- 宏定义，三个参数 -->
     <xacro:macro name="robotiq_85_kinova_coupler" params="prefix parent *origin">
 
         <joint name="${prefix}kinova_robotiq_coupler_joint" type="fixed">

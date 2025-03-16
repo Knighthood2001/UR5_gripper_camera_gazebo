@@ -1,9 +1,11 @@
 <?xml version="1.0" ?>
 
 <robot name="robotiq_85_gripper" xmlns:xacro="http://ros.org/wiki/xacro">
+    <!-- 导入文件 -->
     <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
+    <!-- 这个文件会用到robotiq_85_gripper.transmission.xacro -->
     <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_kinova_coupler.urdf.xacro" />
-    
+    <!--  -->
     <xacro:property name="pi" value="3.1415"/>
     
     <gazebo>
@@ -48,11 +50,11 @@
     </joint>
 
     <link name="ee_link"/>
-    
+    <!-- 函数调用 -->
     <xacro:robotiq_85_kinova_coupler prefix="" parent="ee_link">
         <origin xyz="-0.152757 0 0" rpy="0 ${-pi/2} 0"/>
     </xacro:robotiq_85_kinova_coupler>
-
+    <!-- 函数调用 -->
     <xacro:robotiq_85_gripper prefix="" parent="robotiq_coupler_link" >
         <origin xyz="0 0 -0.05105" rpy="0 ${pi/2} 0"/>
     </xacro:robotiq_85_gripper>
